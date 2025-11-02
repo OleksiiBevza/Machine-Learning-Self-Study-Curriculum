@@ -7,7 +7,7 @@ The repository includes two main folders â€” Mathematics and Computer Science â€
 (iii) Postgraduate curriculum
 (iv) PhD level
 
-## Mathematics
+# Mathematics
 
 ### Prerequisites
 
