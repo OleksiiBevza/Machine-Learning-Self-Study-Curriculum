@@ -17,7 +17,7 @@ The repository includes two main folders — Mathematics and Computer Science �
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **Precalculus** | The course includes two books with exercises (learners may choose either one) and accompanying video materials: [Set 1](https://www.youtube.com/watch?v=9OOrhA2iKak&list=PLDesaqWTN6ESsmwELdrzhcGiRhk5DjwLP) &nbsp;&nbsp;&nbsp; [Set 2](https://mathispower4u.com/alg-2.php) &nbsp;&nbsp;&nbsp; [Set 3](https://mathispower4u.com/trigonometry.php) |
-| **Calculus (Single and Multi-variable)** | The course includes two books with exercises (learners may choose either one) and accompanying video materials (in case of set 4 and set 5, Calculus I, Calculus II, and Calculus III playlist should be taken into account: [Set 4](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set 5](https://www.youtube.com/@ProfessorLeonard/courses) &nbsp;&nbsp;&nbsp; [Set 6](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) [Set 7](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/) |
+| **Calculus (Single and Multi-variable)** | The course includes two books with exercises (learners may choose either one) and accompanying video materials (in case of set 4 and set 5, Calculus I, Calculus II, and Calculus III playlist should be taken into account: [Set 4](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set 5](https://www.youtube.com/@ProfessorLeonard/courses) &nbsp;&nbsp;&nbsp; [Set 6](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) &nbsp;&nbsp;&nbsp; [Set 7](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/) |
 | **Ordinary Differential Equations** | — |
 | **Linear Algebra I** | — |
 
