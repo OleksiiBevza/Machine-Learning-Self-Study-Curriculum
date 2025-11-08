@@ -1,0 +1,10 @@
+
+  This directory contains the source code files for the examples used
+in the textbook "Data Structures and Algorithms in Python" by John
+Canning, Alan Broder, and Robert Lafore.  The source files are
+organized by the chapter they appear in.  Some sources are repeated in
+later chapters where they are imported.
+
+  The Python code uses Python 3 syntax.
+
+  Copyright © 2024.  All Rights Reserved.

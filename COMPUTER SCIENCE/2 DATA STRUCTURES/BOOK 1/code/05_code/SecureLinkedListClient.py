@@ -1,0 +1,71 @@
+from SecureLinkedList import *
+
+llist = LinkedList()
+
+print('Initial list has', len(llist), 'element(s) and empty =', 
+      llist.isEmpty())
+
+people = ['Don', 'Ken', 'Ivan', 'Raj', 'Amir', 'Adi']
+for person in people:
+   llist.insert(person)
+
+print('After inserting', len(llist), 
+      'persons into the linked list, it contains:\n', llist, 
+      'and empty =', llist.isEmpty())
+
+print('Removing items by key from the linked list in different order:')
+for person in people[3:] + people[:3]:
+   llist.delete(person)
+   print('After deleting', person, 'the list is', llist)
+
+print('Test with complex data type')
+def second(x):
+   return x[1]
+
+llist = LinkedList()
+after = None
+for i, person in enumerate(people):
+   datum = (i * i, person)
+   if after:
+      llist.insertAfter(after, datum, key=second)
+   else:
+      llist.insert(datum)
+      after = second(datum)
+
+print('After inserting', len(llist) - 1, 
+      'persons into the linked list after,', after, 
+      'it contains:')
+llist.traverse()
+
+print('Removing items by key from the linked list in different order:')
+for person in people[3:] + people[:3]:
+   llist.delete(person, key=second)
+   print('After deleting', person, 'the list is', llist)
+
+
+print('Trying to access private methods like __getNext() should '
+      'raise an exception ...')
+try:
+   print(llist.__getNext())
+except Exception as e:
+   print('>>> Exception raised: ', e)
+else:
+   print('No exception raised!')
+
+print('Trying to store something other than None in __next should '
+      'raise an exception ...')
+try:
+   llist.__setNext('Ken')
+except Exception as e:
+   print('>>> Exception raised: ', e)
+else:
+   print('No exception raised!')
+
+print('Removing from an empty linked list should raise an exception ...')
+try:
+   llist.delete('non-existant')
+   print('This should not be printed! Empty list allowed delete!')
+except Exception as e:
+   print('Exception was raised:\n', e)
+
+

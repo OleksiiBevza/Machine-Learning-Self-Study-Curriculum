@@ -1,0 +1,17 @@
+
+
+
+cd C:/Users/oleks/datastructures-visualization
+
+venv\Scripts\activate
+
+
+python DatastructureVisualizations.py
+
+
+
+
+
+
+
+
