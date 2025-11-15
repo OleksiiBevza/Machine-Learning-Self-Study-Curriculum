@@ -28,7 +28,7 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 | **Real analysis** | — |
 | **Functional analysis** | — |
 | **Measure theory** | — |
-| **Mathematics for machine learning** | The course includes two books with exercises. Prerequisites: Linear Algebra, Introduction to probability and inference, Real analysis. Accompanying materials: &nbsp;&nbsp;&nbsp; [Set](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/) &nbsp;&nbsp;&nbsp; [Set]()  |
+| **Mathematics for machine learning** | The course includes two books with exercises. Prerequisites: Linear Algebra, Introduction to probability and inference, Real analysis. Accompanying video materials: &nbsp;&nbsp;&nbsp; [Set](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/) |
 
 ### Postgraduate
 | **Topic** | **Description** |
@@ -66,7 +66,7 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 | **Software construction and design** | The course includes several books with corresponding code. Prerequisites: Introduction to computer science with Python, Data structures, Introduction to algorithms. Accompanying materials with code: &nbsp;&nbsp;&nbsp; [Set 8](https://web.mit.edu/6.031/www/sp22/) &nbsp;&nbsp;&nbsp; [Set9](https://github.com/PacktPublishing/Hands-On-Software-Engineering-with-Python-Second-Edition) &nbsp;&nbsp;&nbsp; [Set10](https://github.com/PacktPublishing/Hands-On-Software-Engineering-with-Python) &nbsp;&nbsp;&nbsp; [Set11](https://github.com/Apress/advanced-python-development) |
 | **Databases** | The course includes one book. Prerequisites: Discrete mathematics and set theory, Data structures, Introduction to algorithms. Accompanying materials with video lectures (introduction or advanced): &nbsp;&nbsp;&nbsp; [Set12](https://www.youtube.com/@CMUDatabaseGroup/playlists) |
 | **Algorithms engineering** | The course includes a list of papers.  Prerequisites: Data structures, Introduction to algorithms, Software construction and design, Discrete mathematics and set theory . Accompanying video materials: &nbsp;&nbsp;&nbsp; [Set13](https://www.youtube.com/watch?v=0JUN9aDxVmI&list=PL2SOU6wwxB0uP4rJgf5ayhHWgw7akUWSf&index=1) &nbsp;&nbsp;&nbsp; [Set14](https://jshun.csail.mit.edu/6506-s24/), [Set15](https://jshun.csail.mit.edu/6506-s24/) |
-| **Computability and complexity theory** |  |
+| **Computability and complexity theory** | The course includes several books. Prerequisites: Data structures, Introduction to algorithms, Computation structures, Discrete mathematics and set theory. Accompanying video materials: &nbsp;&nbsp;&nbsp; [Set16](https://people.csail.mit.edu/rrw/6.045-2020/) &nbsp;&nbsp;&nbsp; [Set17](https://www.youtube.com/watch?v=9syvZr-9xwk&list=PLUl4u3cNGP60_JNv2MmK3wkOt9syvfQWY&index=1) |
 
 ### Postgraduate
 | **Topic** | **Description** |
