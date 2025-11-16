@@ -43,9 +43,9 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 
 # Mathematics
-<a id="curriculum-table"></a>
-### Prerequisites
 
+### Prerequisites
+<a id="curriculum-table"></a>
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **[Precalculus](#precalculus)** | The course includes two books with exercises (learners may choose either one) and accompanying video materials with practice problems: &nbsp;&nbsp;&nbsp; [Set 1](https://www.youtube.com/watch?v=9OOrhA2iKak&list=PLDesaqWTN6ESsmwELdrzhcGiRhk5DjwLP) &nbsp;&nbsp;&nbsp; [Set 2](https://mathispower4u.com/alg-2.php) &nbsp;&nbsp;&nbsp; [Set 3](https://mathispower4u.com/trigonometry.php) |
