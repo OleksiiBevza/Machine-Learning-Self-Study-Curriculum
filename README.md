@@ -19,27 +19,70 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
   - [Calculus: Single and Multi-variable](#calculus)
 
 
+# Curriculum
+
+## Table of Contents
+- [Mathematics](#mathematics)
+  - [Prerequisites](#prerequisites)
+  - [Undergraduate](#undergraduate)
+  - [Postgraduate](#postgraduate)
+
+---
+
+# Mathematics
+
+## Prerequisites
+- [Precalculus](#precalculus)
+- [Calculus (Single & Multivariable)](#calculus-single--multivariable)
+- [Ordinary Differential Equations](#ordinary-differential-equations)
+- [Linear Algebra I](#linear-algebra-i)
+
+## Undergraduate
+- [Introduction to Probability and Inference](#introduction-to-probability-and-inference)
+- [Discrete Mathematics and Set Theory](#discrete-mathematics-and-set-theory)
+- [Real Analysis](#real-analysis)
+- [Functional Analysis](#functional-analysis)
+- [Measure Theory](#measure-theory)
+- [Mathematics for Machine Learning](#mathematics-for-machine-learning)
+
+## Postgraduate
+- [Linear Algebra II](#linear-algebra-ii)
+- [Probability II](#probability-ii)
+- [High-Dimensional Statistics](#high-dimensional-statistics)
+
+---
+
+# Mathematics Overview (Clickable Table)
+
+| **Level** | **Subjects** |
+|----------|--------------|
+| **Prerequisites** | - [Precalculus](#precalculus) <br> - [Calculus (Single & Multivariable)](#calculus-single--multivariable) <br> - [Ordinary Differential Equations](#ordinary-differential-equations) <br> - [Linear Algebra I](#linear-algebra-i) |
+| **Undergraduate** | - [Introduction to Probability and Inference](#introduction-to-probability-and-inference) <br> - [Discrete Mathematics and Set Theory](#discrete-mathematics-and-set-theory) <br> - [Real Analysis](#real-analysis) <br> - [Functional Analysis](#functional-analysis) <br> - [Measure Theory](#measure-theory) <br> - [Mathematics for Machine Learning](#mathematics-for-machine-learning) |
+| **Postgraduate** | - [Linear Algebra II](#linear-algebra-ii) <br> - [Probability II](#probability-ii) <br> - [High-Dimensional Statistics](#high-dimensional-statistics) |
+
+---
+
 # Mathematics
 
 ### Prerequisites
 
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
-| **0. Precalculus** | The course includes two books with exercises (learners may choose either one) and accompanying video materials with practice problems: &nbsp;&nbsp;&nbsp; [Set 1](https://www.youtube.com/watch?v=9OOrhA2iKak&list=PLDesaqWTN6ESsmwELdrzhcGiRhk5DjwLP) &nbsp;&nbsp;&nbsp; [Set 2](https://mathispower4u.com/alg-2.php) &nbsp;&nbsp;&nbsp; [Set 3](https://mathispower4u.com/trigonometry.php) |
-| **1. Calculus (Single and Multi-variable)** | The course includes two books with exercises (learners may choose either one). Prerequisites: Precalculus. Accompanying video materials with with practice problems: (in case of set 4 and set 5, Calculus I, Calculus II, and Calculus III playlist should be taken into account: &nbsp;&nbsp;&nbsp; [Set 4](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set 5](https://www.youtube.com/@ProfessorLeonard/courses) &nbsp;&nbsp;&nbsp; [Set 6](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) &nbsp;&nbsp;&nbsp; [Set 7](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/) |
-| **2. Ordinary Differential Equations** | The course includes one book. Prerequisites: Calculus. Accompanying video materials with exercises: &nbsp;&nbsp;&nbsp; [Set 8](https://www.youtube.com/watch?v=xf-3ATzFyKA&list=PLDesaqWTN6ESPaHy2QUKVaXNZuQNxkYQ_) &nbsp;&nbsp;&nbsp; [Set 9](https://mathispower4u.com/diff-eq.php)&nbsp;&nbsp;&nbsp; [Set 10](https://www.youtube.com/watch?v=76WdBlGpxVw&list=PL64BDFBDA2AF24F7E) |
-| **3. Linear Algebra I** | The course includes several books with exercises (learners may use them interchangeably). Prerequisites: Calculus. Accompanying video materials with with practice problems: &nbsp;&nbsp;&nbsp; [Set11](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set12](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C) |
+| **Precalculus** | The course includes two books with exercises (learners may choose either one) and accompanying video materials with practice problems: &nbsp;&nbsp;&nbsp; [Set 1](https://www.youtube.com/watch?v=9OOrhA2iKak&list=PLDesaqWTN6ESsmwELdrzhcGiRhk5DjwLP) &nbsp;&nbsp;&nbsp; [Set 2](https://mathispower4u.com/alg-2.php) &nbsp;&nbsp;&nbsp; [Set 3](https://mathispower4u.com/trigonometry.php) |
+| **Calculus (Single and Multi-variable)** | The course includes two books with exercises (learners may choose either one). Prerequisites: Precalculus. Accompanying video materials with with practice problems: (in case of set 4 and set 5, Calculus I, Calculus II, and Calculus III playlist should be taken into account: &nbsp;&nbsp;&nbsp; [Set 4](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set 5](https://www.youtube.com/@ProfessorLeonard/courses) &nbsp;&nbsp;&nbsp; [Set 6](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) &nbsp;&nbsp;&nbsp; [Set 7](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/) |
+| **Ordinary Differential Equations** | The course includes one book. Prerequisites: Calculus. Accompanying video materials with exercises: &nbsp;&nbsp;&nbsp; [Set 8](https://www.youtube.com/watch?v=xf-3ATzFyKA&list=PLDesaqWTN6ESPaHy2QUKVaXNZuQNxkYQ_) &nbsp;&nbsp;&nbsp; [Set 9](https://mathispower4u.com/diff-eq.php)&nbsp;&nbsp;&nbsp; [Set 10](https://www.youtube.com/watch?v=76WdBlGpxVw&list=PL64BDFBDA2AF24F7E) |
+| **Linear Algebra I** | The course includes several books with exercises (learners may use them interchangeably). Prerequisites: Calculus. Accompanying video materials with with practice problems: &nbsp;&nbsp;&nbsp; [Set11](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp;&nbsp; [Set12](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C) |
 
 ### Undergraduate
 
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
-| **4. Introduction to probability and inference** | The course includes two books with exercises and solutions. It is essential to do as many exercises as possible and to understand the topics presented, because this course forms the foundation of machine learning. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying materials with practice problems:  &nbsp;&nbsp;&nbsp; [Set13](https://stat110.hsites.harvard.edu/)|
-| **5. Discrete mathematics and set theory** | The course includes two books with exercises and serve as an introduction to set theory and discrete mathematics. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying materials with practice problems: &nbsp;&nbsp;&nbsp; [Set14](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/pages/syllabus/) |
-| **6. Real analysis** | — |
-| **7. Functional analysis** | — |
-| **8. Measure theory** | — |
-| **9. Mathematics for machine learning** | The course includes two books with exercises. Prerequisites: Linear Algebra, Introduction to probability and inference, Real analysis. Accompanying video materials: &nbsp;&nbsp;&nbsp; [Set](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/) |
+| **Introduction to probability and inference** | The course includes two books with exercises and solutions. It is essential to do as many exercises as possible and to understand the topics presented, because this course forms the foundation of machine learning. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying materials with practice problems:  &nbsp;&nbsp;&nbsp; [Set13](https://stat110.hsites.harvard.edu/)|
+| **Discrete mathematics and set theory** | The course includes two books with exercises and serve as an introduction to set theory and discrete mathematics. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying materials with practice problems: &nbsp;&nbsp;&nbsp; [Set14](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/pages/syllabus/) |
+| **Real analysis** | — |
+| **Functional analysis** | — |
+| **Measure theory** | — |
+| **Mathematics for machine learning** | The course includes two books with exercises. Prerequisites: Linear Algebra, Introduction to probability and inference, Real analysis. Accompanying video materials: &nbsp;&nbsp;&nbsp; [Set](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/) |
 
 ### Postgraduate
 | **Topic** | **Description** |
