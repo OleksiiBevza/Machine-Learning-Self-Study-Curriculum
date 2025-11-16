@@ -10,27 +10,16 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 
 
-# Curriculum
-## Table of Contents
-### Mathematics
-
-- [Prerequisites](#prerequisites)
-  - [Precalculus](#precalculus)
-  - [Calculus: Single and Multi-variable](#calculus)
 
 
-# Curriculum
-
-## Table of Contents
+# Table of Contents
+- [Curriculum](#curriculum-table)
 - [Mathematics](#mathematics)
   - [Prerequisites](#prerequisites)
-     - [Precalculus](#precalculus)
-     - [Calculus (Single & Multivariable)](#calculus-single--multivariable)
-     - [Ordinary Differential Equations](#ordinary-differential-equations)
-     - [Linear Algebra I](#linear-algebra-i)
-  - [Undergraduate](#undergraduate)
-  - [Postgraduate](#postgraduate)
-
+    - [Precalculus](#precalculus)
+    - [Calculus (Single & Multivariable)](#calculus-single--multivariable)
+    - [Ordinary Differential Equations](#ordinary-differential-equations)
+    - [Linear Algebra I](#linear-algebra-i)
 ---
 
 
@@ -54,7 +43,7 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 
 # Mathematics
-
+<a id="curriculum-table"></a>
 ### Prerequisites
 
 | **Topic** | **Description** |
