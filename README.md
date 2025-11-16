@@ -8,6 +8,16 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 (iv) PhD level (offers state-of-the-art methodological solutions in data science)
 
+
+
+# Curriculum
+## Table of Contents
+### Mathematics
+
+- [Prerequisites](#prerequisites)
+
+
+
 # Mathematics
 
 ### Prerequisites
