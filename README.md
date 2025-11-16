@@ -24,18 +24,18 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 ## Table of Contents
 - [Mathematics](#mathematics)
   - [Prerequisites](#prerequisites)
+     - [Precalculus](#precalculus)
+     - [Calculus (Single & Multivariable)](#calculus-single--multivariable)
+     - [Ordinary Differential Equations](#ordinary-differential-equations)
+     - [Linear Algebra I](#linear-algebra-i)
   - [Undergraduate](#undergraduate)
   - [Postgraduate](#postgraduate)
 
 ---
 
-# Mathematics
 
-## Prerequisites
-- [Precalculus](#precalculus)
-- [Calculus (Single & Multivariable)](#calculus-single--multivariable)
-- [Ordinary Differential Equations](#ordinary-differential-equations)
-- [Linear Algebra I](#linear-algebra-i)
+
+
 
 ## Undergraduate
 - [Introduction to Probability and Inference](#introduction-to-probability-and-inference)
@@ -52,15 +52,6 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 ---
 
-# Mathematics Overview (Clickable Table)
-
-| **Level** | **Subjects** |
-|----------|--------------|
-| **Prerequisites** | - [Precalculus](#precalculus) <br> - [Calculus (Single & Multivariable)](#calculus-single--multivariable) <br> - [Ordinary Differential Equations](#ordinary-differential-equations) <br> - [Linear Algebra I](#linear-algebra-i) |
-| **Undergraduate** | - [Introduction to Probability and Inference](#introduction-to-probability-and-inference) <br> - [Discrete Mathematics and Set Theory](#discrete-mathematics-and-set-theory) <br> - [Real Analysis](#real-analysis) <br> - [Functional Analysis](#functional-analysis) <br> - [Measure Theory](#measure-theory) <br> - [Mathematics for Machine Learning](#mathematics-for-machine-learning) |
-| **Postgraduate** | - [Linear Algebra II](#linear-algebra-ii) <br> - [Probability II](#probability-ii) <br> - [High-Dimensional Statistics](#high-dimensional-statistics) |
-
----
 
 # Mathematics
 
