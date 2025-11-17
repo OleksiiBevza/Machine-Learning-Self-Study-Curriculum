@@ -85,8 +85,8 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 ### Postgraduate
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
-| **10. Linear Algebra II** |---|
-| **11. Probability II** | ----- |
+| **10. Linear Algebra II** |The course includes two books with exercises. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying video materials with with practice problems: &nbsp;&nbsp;&nbsp; [Set19](https://www.youtube.com/@ProfWonMath/videos) &nbsp;&nbsp;&nbsp; [Set20](https://www.youtube.com/@ProfessorMacauley/courses) |
+| **11. Probability II** | The course includes two books with exercises. There is also an extremely useful **The Book of Statistical Proofs** book. Prerequisites: Introduction to probability and inference, Real analysis, Functional Analysis, Measure theory.  |
 | **12. High-Dimensional Statistics** | — |
 
 
