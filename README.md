@@ -119,8 +119,8 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 ### Postgraduate
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
-| **Machine Learning II** |---|
-| **Deep Learning** | ----- |
+| **Machine Learning II** | The course includes one book. Prerequisites: Introduction to probability and inference, Introduction to algorithms, Machine Learning I, Real analysis, Functional Analysis  Accompanying materials with code: &nbsp;&nbsp;&nbsp; [Set18](https://probml.github.io/pml-book/book2.html) |
+| **Deep Learning** |  The course includes two books. Prerequisites: Introduction to probability and inference, Introduction to computer science with Python, Linear Algebra I. Accompanying materials with videos, articles and code: &nbsp;&nbsp;&nbsp; [Set19](https://deeplearning6-7960.github.io/)  &nbsp;&nbsp;&nbsp; [Set20](https://deeplearning.cs.cmu.edu/F25/index.html) |
 | **Differentiable programming** | ----- |
 | **Optimization** | ----- |
 | **Machine Learning systems** | ----- |
