@@ -6,7 +6,7 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 (iii) Postgraduate curriculum (offers advanced topics in data science)
 
-(iv) PhD level (offers state-of-the-art methodological solutions in data science)
+(iv) Specialized topics (coming soon)
 
 
 
@@ -124,8 +124,8 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 | **Differentiable programming** | The course includes one book. Prerequisites: Introduction to probability and inference, Linear Algebra I. |
 | **Optimization** | The course includes one book. Prerequisites: , Linear Algebra I, Introduction to probability and inference, Discrete mathematics and set theory, Real Analysis, Data structures, Introduction to algorithms. Accompanying materials with additional resourses: &nbsp;&nbsp; [Set21](https://www.youtube.com/playlist?list=PL3940DD956CDF0622) &nbsp;&nbsp; [Set22](https://www.stat.cmu.edu/~ryantibs/convexopt-F18/) &nbsp;&nbsp; [Set23](https://github.com/ebrahimpichka/awesome-optimization?tab=readme-ov-file#video-lectures-and-courses) |
 | **Machine Learning systems** | The course includes one book. Prerequisites: Introduction to probability and inference, Machine Learning I, Machine Learning II, Computation structures, Software construction and design, Algorithms engineering. Accompanying materials with additional resourses: &nbsp;&nbsp; [Set24](https://github.com/harvard-edge/cs249r_book) |
-| **Reinforcement Learning** | The course includes one book and several articles.  Accompanying materials with additional resourses: &nbsp;&nbsp; [Set25](https://www.youtube.com/playlist?list=PLiCLbsFQNFAxOmVeqPhI5er1LGf2-L9I4) &nbsp;&nbsp; [Set26](https://github.com/mphuget/References--Reinforcement-Learning?tab=readme-ov-file) |
-| **Quantuum algorithms** | ----- |
+| **Reinforcement Learning** | The course includes several books and articles.  Accompanying materials with additional resourses (videos, articles, code): &nbsp;&nbsp; [Set25](https://www.youtube.com/playlist?list=PLiCLbsFQNFAxOmVeqPhI5er1LGf2-L9I4) &nbsp;&nbsp; [Set26](https://github.com/mphuget/References--Reinforcement-Learning?tab=readme-ov-file), [Set 27](https://www.youtube.com/@CentrumWiskundeInformatica/videos) |
+| **Quantuum algorithms** | coming soon |
 
 
 
