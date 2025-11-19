@@ -6,7 +6,7 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 
 (iii) Postgraduate curriculum (offers advanced topics in data science)
 
-(iv) Specialized topics (coming soon. Here )
+(iv) Specialized topics (coming soon...)
 
 
 
