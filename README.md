@@ -1,4 +1,4 @@
-The idea of this repository is to create a rigorous undergraduate and postgraduate curriculum in data science. The repository includes two main folders: Mathematics and Computer Science, each divided into four sections. Some of the material is presented as a list of scientific articles instead of books. 
+The idea of this repository is to create a rigorous undergraduate and postgraduate curriculum in data science. The repository includes two main folders: Mathematics and Computer Science, each divided into four sections. Some of the material is presented as a list of scientific articles instead of books. Books, solutions to the exercises, and code are available in the relevant folders. Links to the video lectures can be found below, under the brief description of each subject.
 
 (i) Prerequisites (basic theoretical knowledge needed to begin the essentials of data science)
 
