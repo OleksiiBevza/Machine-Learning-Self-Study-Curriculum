@@ -56,6 +56,8 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
     - Data Mining
     - Quantuum algorithms 
 - **[Specialized topics](#specialized-topics)**
+    - Online / Continual Learning
+    - Real-time anomal detection
 
 
 
