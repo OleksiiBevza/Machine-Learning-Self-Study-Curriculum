@@ -142,4 +142,5 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 ### Statistics
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
-| ------------- | coming soon |
+| **Online / Continual Learning**| Since offline models were only trained once on past observations and freezed, they assume that data come from a stationary distribution and find hard time adapting to the new scenario. This theoretical limitations do influence time series analysis. The solution for the problem is online / continual learning. The link to the repository provides a list of articles which introduce the problem thoroughly [Set1](https://github.com/xialeiliu/Awesome-Incremental-Learning)|
+|**Real-time anomaly detection**| coming soon|
