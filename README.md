@@ -140,10 +140,10 @@ The idea of this repository is to create a rigorous undergraduate and postgradua
 ---
 ---
 ---
-# Speciaziled topics
+# Specialized topics
 
 ### Time-series
-| **Topic** | **Description** |
-|:-----------|:-------------------------------------|
-| **Online / Continual Learning**| Since offline models were only trained once on past observations and freezed, they assume that data come from a stationary distribution and find hard time adapting to the new scenario. This theoretical limitations do influence time series analysis. The solution for the problem is online / continual learning. Material: &nbsp;&nbsp; [Set1](https://github.com/xialeiliu/Awesome-Incremental-Learning)| &nbsp;&nbsp; [Set2](https://course.continualai.org/background/details) &nbsp;&nbsp; [Set3](https://www.mit.edu/~rakhlin/6.883/#datasets) &nbsp;&nbsp; [Set4](https://github.com/online-ml/river?tab=readme-ov-file) |
-|**Real-time anomaly detection**| coming soon|
+| **Topic** | **Description** | **Materials** |
+|:-----------|:-------------------------------------|:-------------------------------------|
+| **Online / Continual Learning**| Offline models are typically trained once and remain static, assuming a stationary distribution. This makes it difficult for them to adapt to evolving patterns. Online and continual learning address this by allowing models to update incrementally as new data arrives. | [Set1](https://github.com/xialeiliu/Awesome-Incremental-Learning), [Set2](https://course.continualai.org/background/details), [Set3](https://www.mit.edu/~rakhlin/6.883/#datasets), [Set4](https://github.com/online-ml/river?tab=readme-ov-file) |
+| **Real-time anomaly detection**| Focuses on identifying outliers or significant deviations in streaming data with low latency. | *Coming soon* |
