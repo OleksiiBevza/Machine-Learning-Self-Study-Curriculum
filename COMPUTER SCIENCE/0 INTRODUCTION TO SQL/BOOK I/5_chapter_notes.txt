@@ -1,0 +1,182 @@
+########################################################################
+# CHAPTER 5
+########################################################################
+
+
+
+
+
+
+
+5.1. INNER JOIN
+------------------------------------------------------------------
+
+SELECT c.first_name, c.last_name, a.address
+FROM customer c INNER JOIN address a
+  ON c.address_id = a.address_id;
+
+
+-- also possible = inner join is by default here
+mysql> SELECT c.first_name, c.last_name, a.address
+    -> FROM customer c, address a
+    -> WHERE c.address_id = a.address_id
+    ->   AND a.postal_code = 52137;
+
+-- but this guy is conventionlly proper
+mysql> SELECT c.first_name, c.last_name, a.address
+    -> FROM customer c INNER JOIN address a
+    ->   ON c.address_id = a.address_id
+    -> WHERE a.postal_code = 52137;
+
+
+
+
+
+mysql> SELECT c.first_name, c.last_name, ct.city
+    -> FROM customer c
+    ->   INNER JOIN address a
+    ->   ON c.address_id = a.address_id
+    ->   INNER JOIN city ct
+    ->   ON a.city_id = ct.city_id;
+
+
+-- remember that an order is not important
+SELECT c.first_name, c.last_name, ct.city
+FROM customer c
+  INNER JOIN address a
+  ON c.address_id = a.address_id
+  INNER JOIN city ct
+  ON a.city_id = ct.city_id;
+
+SELECT c.first_name, c.last_name, ct.city
+FROM city ct
+  INNER JOIN address a
+  ON a.city_id = ct.city_id
+  INNER JOIN customer c
+  ON c.address_id = a.address_id;
+
+SELECT c.first_name, c.last_name, ct.city
+FROM address a
+  INNER JOIN city ct
+  ON a.city_id = ct.city_id
+  INNER JOIN customer c
+  ON c.address_id = a.address_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.2. Using Subqueries as Tables
+------------------------------------------------------------------
+
+mysql> SELECT c.first_name, c.last_name, addr.address, addr.city
+    -> FROM customer AS c
+    ->   INNER JOIN
+    ->    (SELECT a.address_id, a.address, ct.city
+    ->     FROM address AS a
+    ->       INNER JOIN city ct
+    ->       ON a.city_id = ct.city_id
+    ->     WHERE a.district = 'California'
+    ->    ) AS addr
+    ->   ON c.address_id = addr.address_id;
+
+The subquery is given the alias addr, 
+finds all addresses that are in California.
+
+The outer query joins the subquery results to the customer
+table to return the first name, last name, street address, 
+and city of all customers who live in California. 
+
+
+
+
+
+
+
+
+
+
+
+5.3. Using the Same Table Twice
+------------------------------------------------------------------
+--Return all of the films in which two specific actors appear
+mysql> SELECT f.title
+    -> FROM film AS f
+    ->   INNER JOIN film_actor AS fa
+    ->   ON f.film_id = fa.film_id
+    ->   INNER JOIN actor AS a
+    ->   ON fa.actor_id = a.actor_id
+    -> WHERE ((a.first_name = 'CATE' AND a.last_name = 'MCQUEEN')
+    ->     OR (a.first_name = 'CUBA' AND a.last_name = 'BIRCH'));
+
+
+
+
+--Only those films in which both of these actors appeared.
+mysql> SELECT f.title
+    ->  FROM film f
+    ->    INNER JOIN film_actor fa1
+    ->    ON f.film_id = fa1.film_id
+    ->    INNER JOIN actor a1
+    ->    ON fa1.actor_id = a1.actor_id
+    ->    INNER JOIN film_actor fa2
+    ->    ON f.film_id = fa2.film_id
+    ->    INNER JOIN actor a2
+    ->    ON fa2.actor_id = a2.actor_id
+    -> WHERE (a1.first_name = 'CATE' AND a1.last_name = 'MCQUEEN')
+    ->   AND (a2.first_name = 'CUBA' AND a2.last_name = 'BIRCH');
+
+
+
+
+
+
+
+
+
+5.4. SELF-JOINS
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

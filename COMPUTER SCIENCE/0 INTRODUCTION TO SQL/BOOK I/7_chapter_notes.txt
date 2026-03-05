@@ -1,0 +1,244 @@
+########################################################################
+# CHAPTER 7
+########################################################################
+
+
+
+
+
+
+7.1. String Data
+------------------------------------------------------------------
+
+    * CHAR = holds fixed-length, blank-padded strings.
+    * VARCHAR = holds variable-length strings.
+    * TEXT = holds large length strings (referred to as documents).
+
+
+UPDATE string_tbl 
+SET text_fld = 'This string doesn\'t work';
+
+UPDATE string_tbl 
+SET text_fld = 'This string doesn''t work';
+
+
+-- shows only # of spaces that are filled by letters
+mysql> CREATE TABLE string_tbl
+    -> (char_fld CHAR(30),
+    -> vchar_fld VARCHAR(30),
+    -> text_fld TEXT
+    -> );
+
+ mysql> INSERT INTO string_tbl (char_fld, vchar_fld, text_fld)
+    -> VALUES ('This is char data',
+    ->   'This is varchar data',
+    ->   'This is text data');
+
+mysql> SELECT LENGTH(char_fld) char_length,
+    ->   LENGTH(vchar_fld) varchar_length,
+    ->   LENGTH(text_fld) text_length
+    -> FROM string_tbl;
+
+
+-- to find the location of a substring within a string.
+mysql> SELECT POSITION('characters' IN vchar_fld)
+    -> FROM string_tbl;
+
+
+
+-- while comapring: True = 1 and False = 0
+mysql> SELECT name, name LIKE '%y' ends_in_y
+    -> FROM category;
+
+
+
+-- add the second part of the sring to existing one
+mysql> UPDATE string_tbl
+    -> SET text_fld = CONCAT(text_fld, ', but now it is longer');
+
+
+
+
+
+
+7.2. Numeric Data
+------------------------------------------------------------------
+
+mysql> SELECT (37 * 59) / (78 - (8 * 6));
+
+acos( x )       Calculates the arc cosine of x
+asin( x )       Calculates the arc sine of x
+atan( x )       Calculates the arc tangent of x
+cos( x )        Calculates the cosine of x
+cot( x )        Calculates the cotangent of x
+exp( x )        Calculates e^x
+ln( x )         Calculates the natural log of x
+sin( x )        Calculates the sine of x
+sqrt( x )       Calculates the square root of x
+tan( x )        Calculates the tangent of x
+
+
+
+-- calculates the remainder when 4 is divided into 10:
+SELECT MOD(10,4);
+
+
+
+-- take to the power of
+SELECT POW(5,2);
+
+
+
+-- ROUNDING NUMBERS
+    * if a number is between 72 and 73 then CEIL makes it 73
+    * if a number is between 72 and 73 then FLOOR makes it 72
+
+mysql> SELECT CEIL(72.000000001), FLOOR(72.999999999);
++--------------------+---------------------+
+| CEIL(72.000000001) | FLOOR(72.999999999) |
++--------------------+---------------------+
+|                 73 |                  72 |
++--------------------+---------------------+
+
+
+
+-- ROUND BY MIDPOINT
+
+mysql> SELECT ROUND(72.49999), ROUND(72.5), ROUND(72.50001);
++-----------------+-------------+-----------------+
+| ROUND(72.49999) | ROUND(72.5) | ROUND(72.50001) |
++-----------------+-------------+-----------------+
+|              72 |          73 |              73 |
++-----------------+-------------+-----------------+
+
+
+
+mysql> SELECT ROUND(72.0909, 1), ROUND(72.0909, 2), ROUND(72.0909, 3);
++-------------------+-------------------+-------------------+
+| ROUND(72.0909, 1) | ROUND(72.0909, 2) | ROUND(72.0909, 3) |
++-------------------+-------------------+-------------------+
+|              72.1 |             72.09 |            72.091 |
++-------------------+-------------------+-------------------+
+
+
+mysql> SELECT TRUNCATE(72.0909, 1), TRUNCATE(72.0909, 2),
+    ->   TRUNCATE(72.0909, 3);
++----------------------+----------------------+----------------------+
+| TRUNCATE(72.0909, 1) | TRUNCATE(72.0909, 2) | TRUNCATE(72.0909, 3) |
++----------------------+----------------------+----------------------+
+|                 72.0 |                72.09 |               72.090 |
++----------------------+----------------------+----------------------+
+
+
+mysql> SELECT ROUND(17, −1), TRUNCATE(17, −1);
++---------------+------------------+
+| ROUND(17, −1) | TRUNCATE(17, −1) |
++---------------+------------------+
+|            20 |               10 |
++---------------+------------------+
+
+
+-- balance can be negative, remember it
+mysql> SELECT account_id, SIGN(balance), ABS(balance)
+    -> FROM account;
++------------+---------------+--------------+
+| account_id | SIGN(balance) | ABS(balance) |
++------------+---------------+--------------+
+|        123 |             1 |       785.22 |
+|        456 |             0 |         0.00 |
+|        789 |            -1 |       324.22 |
++------------+---------------+--------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7.3. Working with Temporal Data
+------------------------------------------------------------------
+• Wednesday, June 5, 2019
+• 6/05/2019 2:14:56 P.M. EST
+• 6/05/2019 19:14:56 GMT
+• 1562019 (Julian format)
+• Star date [−4] 97026.79 14:14:56 (Star Trek format)
+
+
+Date format components:
+%M      Month name (January to December)
+%m      Month numeric (01 to 12)
+%d      Day numeric (01 to 31)
+%j      Day of year (001 to 366)
+%W      Weekday name (Sunday to Saturday)
+%Y      Year, four-digit numeric  
+%y      Year, two-digit numeric
+%H      Hour (00 to 23)
+%h      Hour (01 to 12)
+%i      Minutes (00 to 59)
+%s      Seconds (00 to 59)
+%f      Microseconds (000000 to 999999)
+%p      A.M. or P.M.
+
+
+
+
+
+
+date        YYYY-MM-DD
+datetime    YYYY-MM-DD HH:MI:SS
+timestamp   YYYY-MM-DD HH:MI:SS
+time        HHH:MI:SS
+
+
+
+
+-- String-to-date conversions
+mysql> SELECT CAST('2019-09-17 15:30:00' AS DATETIME);
++-----------------------------------------+
+| CAST('2019-09-17 15:30:00' AS DATETIME) |
++-----------------------------------------+
+| 2019-09-17 15:30:00                     |
++-----------------------------------------+
+
+
+-- Generate a date value and a time value
+mysql> SELECT CAST('2019-09-17' AS DATE) date_field,
+    ->   CAST('108:17:57' AS TIME) time_field;
++------------+------------+
+| date_field | time_field |
++------------+------------+
+| 2019-09-17 | 108:17:57  |
++------------+------------+
+
+
+
+
+mysql> SELECT CURRENT_DATE(), CURRENT_TIME(), CURRENT_TIMESTAMP();
++----------------+----------------+---------------------+
+| CURRENT_DATE() | CURRENT_TIME() | CURRENT_TIMESTAMP() |
++----------------+----------------+---------------------+
+| 2019-06-05     | 16:54:36       | 2019-06-05 16:54:36 |
++----------------+----------------+---------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

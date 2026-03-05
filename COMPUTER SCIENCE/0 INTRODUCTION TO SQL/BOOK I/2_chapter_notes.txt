@@ -1,0 +1,132 @@
+########################################################################
+# CHAPTER 2 
+########################################################################
+
+
+
+
+
+
+2.4. START DATABASE
+--------------------------------------------
+-- create a database (schema)
+CREATE DATABASE IF NOT EXISTS mydb;
+SHOW DATABASES;
+
+-- shows the currently selected DB
+SELECT DATABASE();
+-- select it (this fixes “No database selected”)
+USE mydb;
+SHOW TABLES;
+DESCRIBE table_name;
+
+
+I created ''my_test'' database, just in case we need it later
+
+
+
+
+
+
+
+
+2.5. CREATING TABLES
+--------------------------------------------
+mysql> CREATE TABLE person
+    ->  (person_id SMALLINT UNSIGNED,
+    ->   fname VARCHAR(20),
+    ->   lname VARCHAR(20),
+    ->   eye_color ENUM('BR','BL','GR'),
+    ->   birth_date DATE,
+    ->   street VARCHAR(30),
+    ->   city VARCHAR(20),
+    ->   state VARCHAR(20),
+    ->   country VARCHAR(20),
+    ->   postal_code VARCHAR(20),
+    ->   CONSTRAINT pk_person PRIMARY KEY (person_id)
+    ->  );
+
+
+
+
+
+
+
+2.6. INSERTING DATA INTO TABLE
+--------------------------------------------
+mysql> INSERT INTO person
+    ->   (person_id, fname, lname, eye_color, birth_date)
+    -> VALUES (0, 'William','Turner', 'BR', '1972-05-27');
+
+mysql> SELECT person_id, fname, lname, birth_date
+    -> FROM person;
+
+mysql> SELECT person_id, fname, lname, birth_date
+    -> FROM person
+    -> WHERE person_id = 1;
+
+mysql> SELECT person_id, fname, lname, birth_date
+    -> FROM person
+    -> WHERE lname = 'Turner';
+
+
+
+
+
+
+
+
+
+5.7. UPDATING DATA
+--------------------------------------------
+mysql> UPDATE person
+    -> SET street = '1225 Tremont St.',
+    ->   city = 'Boston',
+    ->   state = 'MA',
+    ->   country = 'USA',
+    ->   postal_code = '02138'
+    -> WHERE person_id = 1;
+
+
+
+
+
+
+
+
+5.8. DELETING ROWS
+--------------------------------------------
+mysql> DELETE FROM person
+    -> WHERE person_id = 2;
+
+
+
+
+
+
+
+
+5.9. DELETING TABLES
+--------------------------------------------
+DROP TABLE IF EXISTS table_name;
+
+
+
+
+
+
+
+
+5.10. DELETING DATABASE
+--------------------------------------------
+DROP DATABASE IF EXISTS db_name;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+########################################################################
+# CHAPTER 4
+########################################################################
+
+
+
+
+
+
+
+
+4.1. Condition Evaluation
+------------------------------------------------------------------
+
+WHERE first_name = 'STEVEN' AND create_date > '2006-01-01'
+    - WHERE <___> AND <___>     -> (all conditions must be true)
+
+
+WHERE first_name = 'STEVEN' OR create_date > '2006-01-01'
+    - WHERE true OR true        ->  true 
+    - HERE true OR false        ->  true
+    - WHERE false OR true       ->  true
+    - WHERE false OR false      ->  false
+
+
+WHERE (first_name = 'STEVEN' OR last_name = 'YOUNG')
+  AND create_date > '2006-01-01'
+
+    - WHERE (true OR true) AND true             ->  true
+    - WHERE (true OR false) AND true            ->  true
+    - WHERE (false OR true) AND true            ->  true
+    - WHERE (false OR false) AND true false     ->  false
+    - WHERE (true OR true) AND false            ->  false
+    - WHERE (true OR false) AND false false     ->  false
+    - WHERE (false OR true) AND false false     ->  false
+    - WHERE (false OR false) AND false false    ->  false
+
+
+WHERE NOT (first_name = 'STEVEN' OR last_name = 'YOUNG')
+  AND create_date > '2006-01-01'
+
+    - WHERE NOT (true OR true) AND true               ->  false
+    - WHERE NOT (true OR false) AND true              ->  false
+    - WHERE NOT (false OR true) AND true              ->  false
+    - WHERE NOT (false OR false) AND true             ->  true  
+    - WHERE NOT (true OR true) AND false              ->  false
+    - WHERE NOT (true OR false) AND false             ->  false
+    - WHERE NOT (false OR true) AND false             ->  false
+    - WHERE NOT (false OR false) AND false            ->  false
+
+
+
+
+
+
+
+
+
+
+4.2. Equality Condition 
+------------------------------------------------------------------
+mysql> SELECT c.email
+    -> FROM customer c
+    ->   INNER JOIN rental r
+    ->   ON c.customer_id = r.customer_id
+    -> WHERE date(r.rental_date) = '2005-06-14';
+
+
+mysql> SELECT c.email
+    -> FROM customer c
+    ->   INNER JOIN rental r
+    ->   ON c.customer_id = r.customer_id
+    -> WHERE date(r.rental_date) <> '2005-06-14';     -- both != and <> mean not equal here
+
+
+mysql> DELETE FROM rental
+    -> WHERE year(rental_date) = 2004;
+
+
+mysql> DELETE FROM rental
+    -> WHERE year(rental_date) <> 2005 AND year(rental_date) <> 2006;
+
+
+
+
+
+
+
+4.3. Range Condition 
+------------------------------------------------------------------
+
+mysql> SELECT customer_id, rental_date
+    -> FROM rental
+    -> WHERE rental_date < '2005-05-25';
+
+
+mysql> SELECT customer_id, rental_date
+    -> FROM rental
+    -> WHERE rental_date <= '2005-06-16'
+    ->   AND rental_date >= '2005-06-14';
+
+
+mysql> SELECT customer_id, rental_date
+    -> FROM rental
+    -> WHERE rental_date BETWEEN '2005-06-16' AND '2005-06-14';
+
+
+mysql> SELECT customer_id, payment_date, amount
+    -> FROM payment
+    -> WHERE amount BETWEEN 10.0 AND 11.99;
+    # can also be WHERE return_date NOT BETWEEN '2005-05-01' AND '2005-09-01';
+
+
+mysql> SELECT last_name, first_name
+    -> FROM customer
+    -> WHERE last_name BETWEEN 'FA' AND 'FR';
+
+mysql> SELECT title, rating
+    -> FROM film
+    -> WHERE rating = 'G' OR rating = 'PG';
+
+mysql> SELECT title, rating
+    -> FROM film
+    -> WHERE rating IN ('G','PG');
+
+
+mysql> SELECT title, rating
+    -> FROM film
+    -> WHERE rating NOT IN ('PG-13','R', 'NC-17');
+
+
+
+
+
+
+
+
+
+4.3. Matching Conditions
+------------------------------------------------------------------
+
+_           -> Exactly one character
+%           -> Any number of characters (including 0)
+F%          -> Strings beginning with F
+%t          -> Strings ending with t
+%bas%       -> Strings containing the substring 'bas'
+_ _t_       -> Four-character strings with a t in the third position
+
+
+mysql> SELECT last_name, first_name
+    -> FROM customer
+    -> WHERE last_name LIKE '_A_T%S';
+
+
+
+
+
+
+
+
+
+4.4. NULL
+------------------------------------------------------------------
+Not applicable   -> Such as the employee ID column for a transaction that took place at an ATM
+machine
+
+Value not yet known     -> Such as when the federal ID is not known at the time a customer row is created
+
+Value undefined     -> Such as when an account is created for a product that has not yet been added to
+the database
+
+REMEMBER:
+    - An expression can be null, but it can never equal null
+    - Two nulls are never equal to each other
+
+
+
+sysql> SELECT rental_id, customer_id
+    -> FROM rental
+    -> WHERE return_date IS NULL;     
+    # can also be  = NULL;  
+    # can also be IS NOT NULL;
+
+
+
+
+
+
+
+

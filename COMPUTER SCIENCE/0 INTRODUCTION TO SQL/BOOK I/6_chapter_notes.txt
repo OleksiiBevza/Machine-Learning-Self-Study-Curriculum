@@ -1,0 +1,250 @@
+########################################################################
+# CHAPTER 6
+########################################################################
+
+
+
+
+
+
+6.1. UNION Operator  (A + B - intersection(AB))
+------------------------------------------------------------------
+
+You can use:
+
+
+    * UNION (sorts the combined set and removes duplicates)
+mysql> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+    -> UNION
+    -> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%';
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| JENNIFER   | DAVIS     |
+| JUDY       | DEAN      |
+| JODIE      | DEGENERES |
+| JULIANNE   | DENCH     |
++------------+-----------+
+
+
+    * UNION ALL (does not remove dublicztes. The number of 
+                rows in the final data set will always equal 
+                the sum of the number of rows in the sets 
+                being combined)
+mysql> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+    -> UNION ALL
+    -> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%';
+
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| JENNIFER   | DAVIS     |
+| JENNIFER   | DAVIS     |
+| JUDY       | DEAN      |
+| JODIE      | DEGENERES |
+| JULIANNE   | DENCH     |
++------------+-----------+
+
+
+
+
+
+
+
+
+
+
+6.2. INTERSECT Operator (intersection(AB) only)
+------------------------------------------------------------------
+
+    * INTERSECT (removes any duplicate rows)
+
+mysql> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+    -> INTERSECT
+    -> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%';
+
+
+
+
+
+
+
+
+
+
+6.3. EXCEPT Operator (A - B - intersection(AB))
+------------------------------------------------------------------
+
+    * EXCEPT (returns the first result set minus any overlap with the second
+              result set - the second result set)
+
+
+mysql> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+    -> EXCEPT
+    -> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%';
+
+
+
+
+
+
+
+
+
+
+6.3. Set Operation Rules
+------------------------------------------------------------------
+
+
+    *** Sorting Compound Query Results
+
+mysql> SELECT a.first_name fname, a.last_name lname
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+    -> UNION ALL
+    -> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+    -> ORDER BY lname, fname;
+
+
+The column names specified in the two queries are different in this example. If you
+specify a column name from the second query in your order by clause, you will see
+the following error:
+
+mysql> SELECT a.first_name fname, a.last_name lname
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+    -> UNION ALL
+    -> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+    -> ORDER BY last_name, first_name;
+ERROR 1054 (42S22): Unknown column 'last_name' in 'order clause'
+
+
+
+    *** Set Operation Precedence
+
+If your compound query contains more than two queries using different set opera
+tors, you need to think about the order in which to place the queries in your com
+pound statement to achieve the desired results.
+
+
+mysql> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+    -> UNION ALL
+    -> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'M%' AND a.last_name LIKE 'T%'
+    -> UNION
+    -> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%';
+
+This query return sets of nonunique names;
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| JENNIFER   | DAVIS     |
+| JUDY       | DEAN      |
+| JODIE      | DEGENERES |
+| JULIANNE   | DENCH     |
+| MARY       | TANDY     |
+| MENA       | TEMPLE    |
++------------+-----------+
+
+
+
+
+
+mysql> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+    -> UNION
+    -> SELECT a.first_name, a.last_name
+    -> FROM actor a
+    -> WHERE a.first_name LIKE 'M%' AND a.last_name LIKE 'T%'
+    -> UNION ALL
+    -> SELECT c.first_name, c.last_name
+    -> FROM customer c
+    -> WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%';
+
+
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| JENNIFER   | DAVIS     |
+| JUDY       | DEAN      |
+| JODIE      | DEGENERES |
+| JULIANNE   | DENCH     |
+| MARY       | TANDY     |
+| MENA       | TEMPLE    |
+| JENNIFER   | DAVIS     |
++------------+-----------+
+
+
+
+In general, compound queries containing three or more queries are evaluated in order from top to bottom, but with
+the following caveats:
+
+    * The ANSI SQL specification calls for the intersect operator to have precedence
+      over the other set operators.
+    * You may dictate the order in which queries are combined by enclosing multiple
+      queries in parentheses.
+
+
+SELECT a.first_name, a.last_name
+FROM actor a
+WHERE a.first_name LIKE 'J%' AND a.last_name LIKE 'D%'
+UNION
+(SELECT a.first_name, a.last_name
+ FROM actor a
+ WHERE a.first_name LIKE 'M%' AND a.last_name LIKE 'T%'
+ UNION ALL
+ SELECT c.first_name, c.last_name
+ FROM customer c
+ WHERE c.first_name LIKE 'J%' AND c.last_name LIKE 'D%'
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

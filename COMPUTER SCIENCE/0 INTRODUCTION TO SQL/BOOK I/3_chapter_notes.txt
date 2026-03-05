@@ -1,0 +1,222 @@
+########################################################################
+# CHAPTER 3 
+########################################################################
+
+
+
+
+
+
+
+
+
+
+3.1. SELECT CLAUSE = Determines which columns to include in the query’s result set
+------------------------------------------------------------------
+
+mysql> SELECT *
+    -> FROM language;
+
+mysql> SELECT language_id, name, last_update
+    -> FROM language;
+
+-- if many actors played in same film you want not to have dublicates
+mysql> SELECT DISTINCT actor_id         
+    -> FROM film_actor
+    -> ORDER BY actor_id;
+
+
+
+
+
+
+
+
+
+
+3.2. FROM CLAUSE = Identifies the tables from which to retrieve data and how the tables should be joined
+-------------------------------------------------------------------
+
+
+• Permanent tables (i.e., created using the create table statement)
+
+
+
+• Derived tables (i.e., rows returned by a subquery and held in memory)
+mysql> SELECT CONCAT(last_name, ', ', first_name) AS full_name
+    -> FROM customer
+    -> WHERE first_name = 'JESSIE'
+    -> ;
+
+
+
+• Temporary tables (i.e., volatile data held in memory)
+mysql> CREATE TEMPORARY TABLE actors_j
+    -> (actor_id smallint(5),
+    -> first_name varchar(45),
+    -> last_name varchar(45)
+    -> );
+mysql> INSERT INTO actors_j
+    -> SELECT actor_id, first_name, last_name
+    -> FROM actor
+    -> WHERE last_name LIKE 'J%';
+mysql> SELECT * FROM actors_j;
+
+
+
+• Virtual tables    (created using the create view statement. A view is a query that is stored in the data dictionary. 
+                    It looks and acts like a table, but there is no data associated with a view (this is why I call it 
+                    a virtual table). When you issue a query against a view, your query is merged with the view 
+                    definition to create a final query to be executed.)
+
+mysql> CREATE VIEW cust_vw AS
+    -> SELECT customer_id, first_name, last_name, active
+    -> FROM customer;
+
+mysql> SELECT first_name, last_name
+    -> FROM cust_vw
+    -> WHERE active = 0;
+
+
+
+• Table links (joining multiple tables)
+
+mysql> SELECT customer.first_name, customer.last_name,
+    -> time(rental.rental_date) rental_time
+    -> FROM customer
+    -> INNER JOIN rental
+    -> ON customer.customer_id = rental.customer_id
+    -> WHERE date(rental.rental_date) = '2005-06-14';
+
+
+
+• Table Aliases (basically you name tables 'AS c' and 'AS r' not to type a lot)
+mysql> SELECT c.first_name, c.last_name,
+    -> time(r.rental_date) rental_time
+    -> FROM customer AS c
+    -> INNER JOIN rental AS r
+    -> ON c.customer_id = r.customer_id
+    -> WHERE date(r.rental_date) = '2005-06-14';
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.3. WHERE = Filters out unwanted data
+-------------------------------------------------------------------------
+
+mysql> SELECT title
+    -> FROM film
+    -> WHERE rating = 'G' AND rental_duration >= 7;
+
+
+mysql> SELECT title, rating, rental_duration
+    -> FROM film
+    -> WHERE (rating = 'G' AND rental_duration >= 7)
+    -> OR (rating = 'PG-13' AND rental_duration < 4);
+
+
+
+
+
+
+
+
+
+
+
+
+3.4. GROUP BY = Used to group rows together by common column values
+     HAVING = Filters out unwanted groups
+-------------------------------------------------------------------------
+
+mysql> SELECT c.first_name, c.last_name, count(*)
+    -> FROM customer c
+    -> INNER JOIN rental r
+    -> ON c.customer_id = r.customer_id
+    -> GROUP BY c.first_name, c.last_name
+    -> HAVING count(*) >= 40;
+
+
+
+
+
+
+
+
+
+
+
+3.5. ORDER BY = Sorts the rows of the final result set by one or more columns
+-------------------------------------------------------------------------
+
+mysql> SELECT c.first_name, c.last_name,
+    ->   time(r.rental_date) rental_time
+    -> FROM customer c
+    ->   INNER JOIN rental r
+    ->   ON c.customer_id = r.customer_id
+    -> WHERE date(r.rental_date) = '2005-06-14'
+    -> ORDER BY c.last_name;
+
+
+mysql> SELECT c.first_name, c.last_name,
+    ->   time(r.rental_date) rental_time
+    -> FROM customer c
+    ->   INNER JOIN rental r
+    ->   ON c.customer_id = r.customer_id
+    -> WHERE date(r.rental_date) = '2005-06-14'
+    -> ORDER BY time(r.rental_date) desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
