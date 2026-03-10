@@ -10,28 +10,28 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 ---
 # Table of Contents
 - **[Mathematics](#mathematics)**
-  - **[Prerequisites](#prerequisites)**
+  - **[Prerequisites math](#prerequisites-math)**
     - Precalculus
     - Calculus (Single & Multivariable)
     - Ordinary Differential Equations
     - Linear Algebra I
-  - **[Undergraduate](#undergraduate)**
+  - **[Undergraduate math](#undergraduate-math)**
     - Introduction to Probability and Inference
     - Discrete Mathematics and Set Theory
     - Real Analysis
     - Functional Analysis
     - Measure Theory
     - Mathematics for Machine Learning
-  - **[Postgraduate](#postgraduate)**
+  - **[Postgraduate math](#postgraduate-math)**
     - Linear Algebra II
     - Probability II
     - High-Dimensional Statistics
 - **[Computer Science](#computer-science)**
-  - **[Prerequisites](#prerequisites)**
+  - **[Prerequisites CS](#prerequisites-cs)**
     - Preparation to computer science
     - Introduction to computer science with Python
     - Introduction to SQL
-  - **[Undergraduate](#undergraduate)**
+  - **[Undergraduate CS](#undergraduate-cs)**
     - Data structures
     - Introduction to algorithms
     - Machine learning I
@@ -40,7 +40,7 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
     - Databases
     - Algorithms engineering
     - Computability and complexity theory
-  - **[Postgraduate](#postgraduate)**
+  - **[Postgraduate CS](#postgraduate-cs)**
     - Machine Learning II
     - Deep Learning
     - Differentiable programming
