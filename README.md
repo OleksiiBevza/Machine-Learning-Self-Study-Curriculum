@@ -62,7 +62,7 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 ---
 # Mathematics
 
-### Prerequisites
+### Prerequisites math
 <a id="curriculum-table"></a>
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
@@ -71,7 +71,7 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 | **2. Ordinary Differential Equations** | The course includes one book. Prerequisites: Calculus. Accompanying video materials with exercises: &nbsp;&nbsp;&nbsp; [Set 8](https://www.youtube.com/watch?v=xf-3ATzFyKA&list=PLDesaqWTN6ESPaHy2QUKVaXNZuQNxkYQ_) &nbsp;&nbsp; [Set 9](https://mathispower4u.com/diff-eq.php)&nbsp;&nbsp; [Set 10](https://www.youtube.com/watch?v=76WdBlGpxVw&list=PL64BDFBDA2AF24F7E) |
 | **3. Linear Algebra I** | The course includes several books with exercises (learners may use them interchangeably). Prerequisites: Calculus. Accompanying video materials with with practice problems: &nbsp;&nbsp; [Set11](https://mathispower4u.com/linear-alg.php) &nbsp;&nbsp; [Set12](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C) |
 
-### Undergraduate
+### Undergraduate math
 
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
@@ -82,7 +82,7 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 | **8. Measure theory** | The course includes one book. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I, Discrete mathematics and set theory, Real Analysis.|
 | **9. Mathematics for machine learning** | The course includes two books with exercises. Prerequisites: Linear Algebra, Introduction to probability and inference, Real analysis. Accompanying video materials: &nbsp;&nbsp; [Set18](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/) |
 
-### Postgraduate
+### Postgraduate math
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **10. Linear Algebra II** |The course includes two books with exercises. Prerequisites: Calculus, Ordinary Differential Equations, Linear Algebra I. Accompanying video materials with with practice problems: &nbsp;&nbsp; [Set19](https://www.youtube.com/@ProfWonMath/videos) &nbsp;&nbsp; [Set20](https://www.youtube.com/@ProfessorMacauley/courses) |
@@ -97,14 +97,17 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 ---
 # Computer Science
 
-### Prerequisites
+### Prerequisites CS
 
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **0. Preparation to computer science** | The course consists of four books containing exercises and corresponding code solutions. Learners are expected to familiarize themselves with all the material. The recommended environment for running the code is [Visual Studio Code](https://code.visualstudio.com/download) |
 | **1. Introduction to computer science with Python** | The course consists of two books containing exercises and corresponding code solutions. Learners are expected to familiarize themselves with all the material and accompanying videos with practice problems. &nbsp;&nbsp; [Set 1](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/download/)  |
 | **2. Introduction to SQL** | The course consists of two books containing exercises and corresponding code and explains basic SQL syntax |
-### Undergraduate
+
+
+
+### Undergraduate CS
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **2. Data structures** | The course includes several books with corresponding code solutions (learners may use them interchangeably). Prerequisites: Introduction to computer science with Python. Accompanying materials with code: &nbsp;&nbsp; [Set 2](https://github.com/mjwestcott/Goodrich) &nbsp;&nbsp;&nbsp; [Set3](https://kentdlee.github.io/CS2Plus/build/html/index.html) |
@@ -116,7 +119,7 @@ A rigorous self-study roadmap for mathematics, computer science, statistics, and
 | **8. Algorithms engineering** | The course includes a list of papers.  Prerequisites: Data structures, Introduction to algorithms, Software construction and design, Discrete mathematics and set theory . Accompanying video materials: &nbsp;&nbsp; [Set13](https://www.youtube.com/watch?v=0JUN9aDxVmI&list=PL2SOU6wwxB0uP4rJgf5ayhHWgw7akUWSf&index=1) &nbsp;&nbsp; [Set14](https://jshun.csail.mit.edu/6506-s24/), [Set15](https://jshun.csail.mit.edu/6506-s24/) |
 | **9. Computability and complexity theory** | The course includes several books. Prerequisites: Data structures, Introduction to algorithms, Computation structures, Discrete mathematics and set theory. Accompanying video materials: &nbsp;&nbsp; [Set16](https://people.csail.mit.edu/rrw/6.045-2020/) &nbsp;&nbsp; [Set17](https://www.youtube.com/watch?v=9syvZr-9xwk&list=PLUl4u3cNGP60_JNv2MmK3wkOt9syvfQWY&index=1) |
 
-### Postgraduate
+### Postgraduate CS
 | **Topic** | **Description** |
 |:-----------|:-------------------------------------|
 | **Machine Learning II** | The course includes one book. Prerequisites: Introduction to probability and inference, Introduction to algorithms, Machine Learning I, Real analysis, Functional Analysis  Accompanying materials with code: &nbsp;&nbsp; [Set18](https://probml.github.io/pml-book/book2.html) |
